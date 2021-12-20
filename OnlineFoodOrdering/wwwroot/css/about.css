@@ -1,0 +1,64 @@
+﻿/* About Section */
+
+.headings {
+    text-align: center;
+    font-size: 40px;
+}
+#about {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 20px;
+    margin-bottom: 90px;
+}
+
+#pic {
+    display: flex;
+}
+
+    #pic img {
+        width: 575px;
+        height: 400px;
+    }
+
+#intro {
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    padding: 10px;
+}
+
+    #intro h2 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+
+.about .social {
+    width: 100%;
+    clear: both;
+    margin-top: 60px;
+    margin-left: 50px;
+    text-align: center;
+}
+
+
+
+
+    .about .social i {
+        color: #fff;
+        font-size: 22px;
+        height: 45px;
+        width: 45px;
+        border-radius: 50%;
+        line-height: 45px;
+        text-align: justify;
+        background-color: #f28f92;
+        margin: 0px 5px;
+    }
+
+        .about .social i:hover {
+            color: #fff;
+            background-color: #88941e;
+            transition: 1s ease;
+            transform: rotate(360deg);
+        }

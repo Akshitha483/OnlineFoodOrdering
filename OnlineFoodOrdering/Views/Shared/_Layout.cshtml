@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="~/css/layout.css" />
+    
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a class="nav-link" asp-controller="Home" asp-action="Index">Home</a></li>
+            <li><a class="nav-link" asp-controller="Home" asp-action="About">About</a></li>
+            <li><a class="nav-link" asp-controller="Home" asp-action="Product">Menu</a></li>
+            <li><a class="nav-link" asp-controller="Home" asp-action="Feedback">Feedback</a></li>
+            <li><a class="nav-link" asp-controller="Home" asp-action="Login">Login/Sign Up</a></li>
+        </ul>
+    </nav>
+    <div>
+        @RenderBody()
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>Feedback</h4>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/profile.php?id="><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/AkshithaMN1"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/akshithamn99/"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/akshitha-m-n-0268101b9/"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

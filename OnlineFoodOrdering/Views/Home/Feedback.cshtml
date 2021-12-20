@@ -1,0 +1,20 @@
+﻿@model OnlineFoodOrdering.Models.Feedback
+
+    @{
+        ViewData["Title"] = "Feedback";
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+
+    <head>
+        <link rel="stylesheet" href="~/css/feedback.css" />
+    </head>
+
+    <section id="feedback" style="background: url(/images/bgpic.JPG)no-repeat  center center/cover">
+        <h1 class="headings" style="color:black;">FEEDBACK</h1>
+        <form method="post" class="form">
+         
+             <input type="email" name="email" class="input" asp-for="Email" placeholder="Enter Your Email" style="border: 3px solid red; border-radius: 4px;">
+            <input type="text" name="rating" class="input" asp-for="Rating" placeholder="Rate out of 5" style="border: 3px solid red;  border-radius: 4px;">
+            <input type="submit" value="SEND" id="send" style="background-color:tomato;"<a asp-action=" Index"></a>
+        </form>
+    </section>

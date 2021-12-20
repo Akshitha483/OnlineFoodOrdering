@@ -1,0 +1,64 @@
+﻿
+@{
+    ViewData["Title"] = "Product";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@{
+    Layout = "_Layout";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+
+    <h3 style="text-align:center;">Items List</h3>
+    <table cellpadding="2" cellspacing="2" border="1" style="border-color:white">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Photo</th>
+            <th>Price</th>
+            <th>Buy</th>
+        </tr>
+        @foreach (var product in ViewBag.products)
+        {
+            <tr>
+                <td class="d-lg-table-cell">@product.Id</td>
+                <td class="d-lg-table-cell">@product.Name</td>
+                <td class="d-lg-table-cell"><img src="~/images/@product.Photo" width="200" /> </td>
+                <td class="d-lg-table-cell">@(Math.Round(product.Price, 2))</td>
+                <td class="d-lg-table-cell">
+                    <a asp-controller="Home" asp-action="buy" asp-route-id="@product.Id"><img src="~/images/add.JPG" /> </a>
+                </td>
+            </tr>
+        }
+    </table>
+
+</body>
+</html>
+<style>
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    th, td {
+        padding: 8px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+
+    tr:hover {
+        background-color: bisque;
+    }
+    
+    
+    
+</style>
+
